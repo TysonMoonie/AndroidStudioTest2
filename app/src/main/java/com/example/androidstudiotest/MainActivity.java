@@ -1,9 +1,12 @@
 package com.example.androidstudiotest;
 
+import static android.app.PendingIntent.getActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,8 +34,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 tv.setText("Button has been pressed.");
+                Toast.makeText(MainActivity.this,
+                        "How dare you press the button?! It killed my family!", Toast.LENGTH_LONG).show();
             }
+
+
         });
+
+
     }
 
 
